@@ -7,6 +7,27 @@ const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 
+let preloader = document.querySelector('.preloader');
+
+window.addEventListener('load', () => {
+  preloader.classList.add('hide');
+  setTimeout(() => {
+    preloader.remove();
+  }, 1000);
+});
+
+$(function () {
+    var location = window.location.href;
+    var cur_url = location.split('/').pop();
+ 
+    $('.menu__list li, .sticky-list li').each(function () {
+        var link = $(this).find('a').attr('href');
+ 
+        if (cur_url == link) {
+            $(this).addClass('current');
+        }
+    });
+});
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -64,7 +85,7 @@ const validateInputs = () => {
 var didScroll;
 var lastScrollTop = 0;
 var delta = 150;
-var navbarHeight = $('header').outerHeight();
+var navbarHeight = 800;
 
 $(window).scroll(function(event){
     didScroll = true;
@@ -86,7 +107,7 @@ function hasScrolled() {
     
     // If they scrolled down and are past the navbar, add class .nav-up.
     // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
+    if (st < lastScrollTop && st > navbarHeight){
         // Scroll Down
         $('.sticky-nav').addClass('sticky-on');
     } else {
