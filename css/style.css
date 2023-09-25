@@ -1,9 +1,10 @@
 html, body{
 	height: 100%;
+	overflow-x: hidden;
 }
 body{
 	font-family: 'Poppins', sans-serif;
-	overflow-x: hidden;
+	
 }
 main{
 	flex: 1 1 auto;
@@ -1089,6 +1090,4 @@ margin-top: 5px;
   font-size: 27px;
   
 }
-	.sticky-nav{
-		width: 300px;
 }
