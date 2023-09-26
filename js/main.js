@@ -114,13 +114,13 @@ function hasScrolled() {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
             $('.sticky-nav').removeClass('sticky-on');
+             $(menuStMobile).removeClass('menu--open');
+              $(menuStBtn).removeClass('menu--cross');
         }
     }
     
     lastScrollTop = st;
 }
-
-
 
 
 $(document).on('click', '.menu__btn', function(){

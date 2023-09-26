@@ -222,6 +222,9 @@ background-color: transparent;
 	font-size: 14px;
 	font-weight: 600;
 }
+.footer{
+background: #f0fbff;
+}
 .menu__link:hover, .footer__link a:hover{
 	color: #fd5f17;
 	transition: all 0.2s;
@@ -330,7 +333,7 @@ margin: 0;
 	display: flex;
 	gap: 15px;
 }
-.about, .footer{
+.about {
 	position: relative;	
 	background: #f0fbff;
 }
@@ -342,6 +345,11 @@ margin: 0;
   position: absolute;
   left: 0;
   top: 0;
+
+}
+.footer::before{
+
+z-index: -1;
 }
 .about__inner{
 	display: flex;
