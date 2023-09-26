@@ -1,16 +1,19 @@
 html, body{
 	height: 100%;
-	overflow-x: hidden;
+
 }
 body{
 	font-family: 'Poppins', sans-serif;
-	
+
 }
 main{
 	flex: 1 1 auto;
 }
 svg:not(:root) {
   overflow: hidden;
+}
+.wrapper{
+			overflow-x: hidden;
 }
 /*----------------------preloader-------------------*/
 
@@ -77,7 +80,7 @@ svg:not(:root) {
 }
 .navbar{
 	position: relative;
-	z-index: 9999; 
+
 }
 .sticky-nav{
 	width: 100%;
@@ -89,6 +92,7 @@ opacity: 0;
 transition: all 0.7s;
 background: #131e4a;
 border-bottom: 1px solid #fd5f17;
+	z-index: 9999; 
 }
 
 .sticky-on{
@@ -107,6 +111,7 @@ right: 0px;
 top: 10px;
 z-index: 20;
 display: none;
+z-index: 9999;
 
 }
 .menu__btn span, .sticky-btn span {
@@ -209,6 +214,7 @@ background-color: transparent;
 	list-style: none;
 	align-items: center;
 	margin-left: 60px;
+	z-index: 9998;
 }
 .menu__list-item{
 	text-transform: uppercase;
@@ -541,9 +547,7 @@ color: #131e4a;
 	margin-bottom: 15px;
 }
 
-.footer__links, .logo{
-	z-index: 9999;
-}
+
 .footer__links-title{
 	  font-size: 18px;
   text-transform: capitalize;
@@ -1089,5 +1093,4 @@ margin-top: 5px;
 .cta__title {
   font-size: 27px;
   
-}
 }
