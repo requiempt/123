@@ -15,6 +15,24 @@ svg:not(:root) {
 .wrapper{
 			overflow-x: hidden;
 }
+.wrapper.drop{
+	  overflow: hidden;
+    height: 100%;
+}
+
+.wrapper.drop::before{
+content: "";
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.9);
+position: absolute;
+left: 0;
+top: 0;
+z-index: 100;
+transition: all 0.3s;
+opacity: 1;
+}
+
 /*----------------------preloader-------------------*/
 
 .preloader {

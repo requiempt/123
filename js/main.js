@@ -6,7 +6,7 @@ const menuStMobile = document.querySelector('.sticky-list');
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
-
+const wrapper = document.querySelector('.wrapper');
 let preloader = document.querySelector('.preloader');
 
 window.addEventListener('load', () => {
@@ -123,8 +123,10 @@ function hasScrolled() {
 }
 
 
+
 $(document).on('click', '.menu__btn', function(){
  menuBtn.classList.toggle('menu--cross');
+ wrapper.classList.toggle('drop');
 });
 
 $(document).on('click', '.menu__btn', function(){
@@ -133,6 +135,7 @@ $(document).on('click', '.menu__btn', function(){
 
 $(document).on('click', '.sticky-btn', function(){
  menuStBtn.classList.toggle('menu--cross');
+  wrapper.classList.toggle('drop');
 });
 
 $(document).on('click', '.sticky-btn', function(){
